@@ -1,0 +1,19 @@
+# Packages - Install archives packages.
+---
+- name: Packages - Install archives packages
+  hosts: fedora
+  tasks:
+    - name: DNF - Install archives packages
+      become: true
+      dnf:
+        state: latest
+        name:
+          - atool
+          - bzip2
+          - gzip
+          - p7zip
+          - tar
+          - unrar
+          - unzip
+          - xz
+          - zip
