@@ -1,0 +1,12 @@
+# Development - Install NodeJS.
+---
+- name: Development - Install NodeJS
+  hosts: fedora
+  tasks:
+    - name: DNF - Install NodeJS
+      become: true
+      dnf:
+        state: latest
+        name:
+          - nodejs
+          - npm
