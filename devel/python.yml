@@ -1,0 +1,16 @@
+# Development - Install Python 3.
+---
+- name: Development - Install Python 3
+  hosts: fedora
+  tasks:
+    - name: DNF - Install Python 3
+      become: true
+      dnf:
+        state: latest
+        name:
+          - python3
+          - python3-pip
+          - python3-devel
+          - python3-tkinter
+          - python3-setuptools
+          - python3-virtualenv
