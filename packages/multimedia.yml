@@ -1,0 +1,23 @@
+# Packages - Install multimedia packages.
+---
+- name: Packages - Install multimedia packages
+  hosts: fedora
+  tasks:
+    - name: DNF - Install multimedia packages
+      become: true
+      dnf:
+        state: latest
+        name:
+          - ffmpeg
+          - ffmpegthumbnailer
+          - flac
+          - lame
+          - libmad
+          - libmpeg2
+          - libvorbis
+          - speex
+          - wavpack
+          - x264
+          - x265
+          - xvidcore
+          - youtube-dl
