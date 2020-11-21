@@ -9,6 +9,7 @@
         state: latest
         name:
           - ffmpeg
+          - ffmpeg-libs
           - ffmpegthumbnailer
           - flac
           - lame
